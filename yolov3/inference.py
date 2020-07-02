@@ -19,13 +19,13 @@ from model import _get_class
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-dataDir= '/home/kamgo/Donnees/Master_projekt/Data/val2017 (1)/val2017'
+dataDir= '/home/kamgo/Donnees/Master_projekt/Data/val2017'
 model_path= '../model_data/yolov3_OT.h5'
 imageTpye = 'jpg'
 imageFiles ='%s/*.%s'%(dataDir,imageTpye)
 dataType='val2017'
 annFile = '%s/annotations/instances_%s.json'%(dataDir,dataType)
-annFile_result = '%s/annotations/instances_result_yolov3_O_%s.json'%(dataDir,dataType)
+annFile_result = '%s/annotations/instances_predicted_result_%s.json'%(dataDir,dataType)
 
 
 anchors_path= '../model_data/yolo_anchors.txt'

@@ -12,10 +12,12 @@ def main():
     prefix = 'person_keypoints' if annType=='keypoints' else 'instances'
     print ('Running demo for {0} results.'.format(annType))
 
-    resFile = '/home/kamgo/Donnees/Master_projekt/Data/val2017 (1)/val2017/annotations/instances_result_yolov3_O_val2017.json'
-    dataDir='/home/kamgo/Donnees/Master_projekt/Data/val2017 (1)/val2017'
+    
+    dataDir='/home/kamgo/Donnees/Master_projekt/Data/val2017'
     dataType='val2017'
-    annFile = '%s/annotations/%s_%s.json'%(dataDir,prefix,dataType)    
+    annFile = '%s/annotations/%s_%s.json'%(dataDir,prefix,dataType)
+    resFile = '%s/annotations/instances_predicted_result_%s.json'%(dataDir,dataType)
+    print(resFile) 
 
     #initialize COCO ground truth api
     cocoGt=COCO(annFile)
